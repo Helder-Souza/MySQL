@@ -28,17 +28,17 @@ Faça um um select com Inner join entre tabela categoria e produto.
 Faça um select onde traga todos os Produtos de uma categoria específica (exemplo todos
 os produtos que são da categoria hidráulica).*/
 
-/*CREATE DATABASE db_construindo_a_nossa_vida;
-USE db_construindo_a_nossa_vida;*/
-/*CREATE TABLE tb_categoria(
+CREATE DATABASE db_construindo_a_nossa_vida;
+USE db_construindo_a_nossa_vida;
+CREATE TABLE tb_categoria(
 	id BIGINT AUTO_INCREMENT,
     nome VARCHAR(20) NOT NULL,
     tipo VARCHAR(15) NOT NULL,
     setor VARCHAR(15) NOT NULL,
     PRIMARY KEY (id)
-    );*/
+    );
     
-/*CREATE TABLE tb_produto(
+CREATE TABLE tb_produto(
 	id BIGINT AUTO_INCREMENT,
     nome VARCHAR(20) NOT NULL,
     preco DECIMAL (6,2) NOT NULL,
@@ -47,14 +47,14 @@ USE db_construindo_a_nossa_vida;*/
     categoria_id BIGINT NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY(categoria_id) REFERENCES tb_categoria(id)
-    );*/
+    );
     
- /*INSERT INTO tb_categoria(nome, tipo, setor)
+ INSERT INTO tb_categoria(nome, tipo, setor)
  VALUES("Construção","Alvenaria","Construção"),
 	("Construção","Drywall","Construção"),
     ("Acabamento","Pintura","Decoração"),
     ("Acabamento","Revestimento","Construção"); 
- */   
+    
  INSERT INTO tb_produto(nome, preco, qtd_estoque, peso, categoria_id)
  VALUES ("Bloco",2.00,10000,0.300,1),
 	("Cimento",25.00,70000,50,1),
